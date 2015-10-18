@@ -58,7 +58,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
+     <y>90</y>
      <width>1201</width>
      <height>651</height>
     </rect>
@@ -75,7 +75,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page_1">
     <widget class="QStackedWidget" name="stackedWidget_2">
@@ -161,7 +161,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>urlencode</string>
+        <string>base64encode</string>
        </property>
       </widget>
       <widget class="QTextEdit" name="s2_p2_t2">
@@ -184,7 +184,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>urldecode</string>
+        <string>base64decode</string>
        </property>
       </widget>
       <widget class="QTextEdit" name="s2_p2_t1">
@@ -216,7 +216,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>urlencode</string>
+        <string>hexencode</string>
        </property>
       </widget>
       <widget class="QTextEdit" name="s2_p3_t2">
@@ -239,7 +239,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>urldecode</string>
+        <string>hexdecode</string>
        </property>
       </widget>
       <widget class="QTextEdit" name="s2_p3_t1">
@@ -434,7 +434,729 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_4"/>
+   <widget class="QWidget" name="page_4">
+    <widget class="QStackedWidget" name="stackedWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>9</y>
+       <width>1201</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="s3_page_1">
+      <widget class="QLineEdit" name="s3_p1_e16">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>540</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e9">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>50</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e12">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>260</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e6">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>400</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e21">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>330</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e5">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>330</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e20">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>260</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>330</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>qq</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e8">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>540</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l9">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>50</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>密码1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l15">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>470</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>配偶出生日期</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>姓名简拼</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l13">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>330</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>配偶姓名全拼</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l16">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>540</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>配偶手机</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e4">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>260</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l14">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>400</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>配偶姓名简拼</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="s3_p1_b1">
+       <property name="geometry">
+        <rect>
+         <x>990</x>
+         <y>480</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Try Your Luck</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>470</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>用户名1</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e14">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>400</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l10">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>120</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>密码2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l12">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>260</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>补充2</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e17">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>50</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>120</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e18">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>120</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>姓名全拼</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l24">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>540</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>父亲手机</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l21">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>330</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>父亲姓名全拼</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e22">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>400</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l22">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>400</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>父亲姓名简拼</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>400</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>曾用qq</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e10">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>120</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e1">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l23">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>470</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>父亲出生日期</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e13">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>330</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l17">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>50</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>母亲姓名全拼</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l11">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>190</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>补充1</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e24">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>540</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="s3_p1_c1">
+       <property name="geometry">
+        <rect>
+         <x>970</x>
+         <y>370</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>包含额为特殊字符</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l20">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>260</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>母亲手机</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l19">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>190</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>母亲出生日期</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e11">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>190</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>190</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>出生日期</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>540</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>用户名2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>260</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>手机</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="s3_p1_l18">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>120</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>母亲姓名简拼</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s3_p1_e7">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>470</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="s3_p1_d1">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>190</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="s3_p1_ed3">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>190</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="s3_p1_d4">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>470</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="s3_p1_d2">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>470</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2000</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
+       </property>
+       <property name="time">
+        <time>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+        </time>
+       </property>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>908</x>
+         <y>90</y>
+         <width>116</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r1">
+          <property name="text">
+           <string>6位密码</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r2">
+          <property name="text">
+           <string>8位密码</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r3">
+          <property name="text">
+           <string>7-11位密码</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r4">
+          <property name="text">
+           <string>12-16位密码</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>1028</x>
+         <y>90</y>
+         <width>154</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r5">
+          <property name="text">
+           <string>30次随机组合</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r6">
+          <property name="text">
+           <string>100次随机组合</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r7">
+          <property name="text">
+           <string>200次随机组合</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="s3_p1_r8">
+          <property name="text">
+           <string>600次随机组合</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="s3_page_2">
+      <widget class="QPushButton" name="s3_p2_b1">
+       <property name="geometry">
+        <rect>
+         <x>990</x>
+         <y>480</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>go back</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="s3_p2_t1">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>10</y>
+         <width>821</width>
+         <height>581</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
    <widget class="QWidget" name="page_5"/>
    <widget class="QWidget" name="page_6"/>
    <widget class="QWidget" name="page_7"/>
@@ -482,7 +1204,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="text">
-    <string>(en|de)crypt</string>
+    <string>decrypt</string>
    </property>
   </widget>
   <widget class="QPushButton" name="b4">
@@ -495,7 +1217,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="text">
-    <string>4</string>
+    <string>secret</string>
    </property>
   </widget>
   <widget class="QPushButton" name="b5">

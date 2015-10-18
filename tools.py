@@ -7,6 +7,7 @@ import sys
 from base64 import b64encode,  b64decode
 from binascii import hexlify,  unhexlify
 from urllib import parse
+import secret
 from PyQt5.QtCore import pyqtSlot,  QUrl
 from PyQt5.QtWidgets import QWidget,  QApplication
 
@@ -102,6 +103,63 @@ class switch(QWidget, Ui_Form):
     @pyqtSlot()
     def on_b4_clicked(self):
         self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget_3.setCurrentIndex(0)
+        self.s3_p1_r1.setChecked(True)
+        self.s3_p1_r5.setChecked(True)
+        
+    def on_s3_p1_b1_clicked(self):
+        self.stackedWidget_3.setCurrentIndex(1)
+        lev = 0
+        secre = ''
+        qq = []
+        mob = []
+        if self.s3_p1_r5.isChecked():
+            lev = 30
+        if self.s3_p1_r6.isChecked():   
+            lev = 100
+        if self.s3_p1_r7.isChecked():            
+            lev = 200
+        if self.s3_p1_r8.isChecked():
+            lev = 600
+        if (self.s3_p1_e5.text() != ''):
+            qq = secret.qq(self.s3_p1_e5.text()) 
+        if (self.s3_p1_e6.text() != ''):
+            qq = qq + secret.qq(self.s3_p1_e6.text())
+        if (self.s3_p1_e4.text() != ''):
+            mob = secret.mob(self.s3_p1_e4.text())
+        if (self.s3_p1_e16.text() != ''):
+            mob = mob + secret.mob(self.s3_p1_e16.text())
+        if (self.s3_p1_e20.text() != ''):
+            mob = mob + secret.mob(self.s3_p1_e20.text())
+        if (self.s3_p1_e24.text() != ''):
+            mob = mob + secret.mob(self.s3_p1_e24.text())
+        li = qq + mob
+        
+        if self.s3_p1_r1.isChecked():
+            secre = secret.secr(li, lev, 6)
+            print(secre)
+            print('\n'.join(secre))
+            self.s3_p2_t1.setText('\n'.join(secre))
+        if self.s3_p1_r2.isChecked():
+            secre = secret.secr(li, lev, 8)
+            self.s3_p2_t1.setText('\n'.join(secre))
+        if self.s3_p1_r3.isChecked():
+            secre = secret.secr(li, lev, 7)
+            secre = secre + secret.secr(li, lev, 8)
+            secre = secre + secret.secr(li, lev, 9)
+            secre = secre + secret.secr(li, lev, 10)
+            secre = secre + secret.secr(li, lev, 11)
+            self.s3_p2_t1.setText('\n'.join(secre))
+        if self.s3_p1_r4.isChecked():
+            secre = secret.secr(li, lev, 12)
+            secre = secre + secret.secr(li, lev, 13)
+            secre = secre + secret.secr(li, lev, 14)
+            secre = secre + secret.secr(li, lev, 15)
+            secre = secre + secret.secr(li, lev, 16)
+            self.s3_p2_t1.setText('\n'.join(secre))
+            
+    def on_s3_p2_b1_clicked(self):
+        self.stackedWidget_3.setCurrentIndex(0)
         
     @pyqtSlot()
     def on_b5_clicked(self):
