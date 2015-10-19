@@ -111,8 +111,12 @@ class switch(QWidget, Ui_Form):
         self.stackedWidget_3.setCurrentIndex(1)
         lev = 0
         secre = ''
+        name1 = []
+        name2 = []
+        bd = []
         qq = []
         mob = []
+        user = []
         if self.s3_p1_r5.isChecked():
             lev = 30
         if self.s3_p1_r6.isChecked():   
@@ -121,6 +125,42 @@ class switch(QWidget, Ui_Form):
             lev = 200
         if self.s3_p1_r8.isChecked():
             lev = 600
+        if self.s3_p1_c1.isChecked():
+            li = li +secret.foolstr
+        if self.s3_p1_c1.isChecked():
+            li = li + secret.specstr
+        if ((self.s3_p1_e1.text() != '') and (self.s3_p1_e2.text() != '')):
+            name1 = secret.nameq(self.s3_p1_e1.text(),  self.s3_p1_e2.text())
+            name2 = secret.namej(self.s3_p1_e2.text())
+        if ((self.s3_p1_e13.text() != '') and (self.s3_p1_e14.text() != '')):
+            name1 = name1 + secret.nameq(self.s3_p1_e13.text(),  self.s3_p1_e14.text())
+            name2 = name2 + secret.namej(self.s3_p1_e14.text())
+        if ((self.s3_p1_e17.text() != '') and (self.s3_p1_e18.text() != '')):
+            name1 = name1 + secret.nameq(self.s3_p1_e17.text(),  self.s3_p1_e18.text())
+            name2 = name2 + secret.namej(self.s3_p1_e18.text())
+        if ((self.s3_p1_e21.text() != '') and (self.s3_p1_e22.text() != '')):
+            name1 = name1 + secret.nameq(self.s3_p1_e21.text(),  self.s3_p1_e22.text())
+            name2 = name2 + secret.namej(self.s3_p1_e22.text())
+        da = self.s3_p1_d1.dateTime()
+        dat = da.toString('yyyy-MM-dd hh-mm-ss')
+        datt = dat.split(' ')
+        if datt[0] != '2000-01-01':
+            bd = secret.birth(dat)
+        da = self.s3_p1_d2.dateTime()
+        dat = da.toString('yyyy-MM-dd hh-mm-ss')
+        datt = dat.split(' ')
+        if datt[0] != '2000-01-01':
+            bd = bd + secret.birth(dat)
+        da = self.s3_p1_d3.dateTime()
+        dat = da.toString('yyyy-MM-dd hh-mm-ss')
+        datt = dat.split(' ')
+        if datt[0] != '2000-01-01':
+            bd = bd + secret.birth(dat)
+        da = self.s3_p1_d4.dateTime()
+        dat = da.toString('yyyy-MM-dd hh-mm-ss')
+        datt = dat.split(' ')
+        if datt[0] != '2000-01-01':
+            bd = bd + secret.birth(dat)
         if (self.s3_p1_e5.text() != ''):
             qq = secret.qq(self.s3_p1_e5.text()) 
         if (self.s3_p1_e6.text() != ''):
@@ -133,7 +173,20 @@ class switch(QWidget, Ui_Form):
             mob = mob + secret.mob(self.s3_p1_e20.text())
         if (self.s3_p1_e24.text() != ''):
             mob = mob + secret.mob(self.s3_p1_e24.text())
-        li = qq + mob
+        if (self.s3_p1_e7.text() != ''):
+            user = secret.user(self.s3_p1_e7.text())
+        if (self.s3_p1_e8.text() != ''):
+            user = user + secret.user(self.s3_p1_e8.text())
+        if (self.s3_p1_e9.text() != ''):
+            user = user + secret.user(self.s3_p1_e9.text())
+        if (self.s3_p1_e10.text() != ''):
+            user = user + secret.user(self.s3_p1_e10.text())
+        if (self.s3_p1_e11.text() != ''):
+            user = user + secret.user(self.s3_p1_e11.text())
+        if (self.s3_p1_e12.text() != ''):
+            user = user + secret.user(self.s3_p1_e12.text())
+        li = qq + mob + name1 + name2 +user + bd
+        
         
         if self.s3_p1_r1.isChecked():
             secre = secret.secr(li, lev, 6)

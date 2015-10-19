@@ -5,14 +5,40 @@ foolstr = ['1','11','111','1111','11111','111111','1111111','11111111','6','66',
            '012','234','345','456','567','678','789','890','098','987','876','765','654','543','432','210','147','258','369','963','852','741',
            '159','357','951','753','2684','2486','2468','8642','4862','4268','8624','8426','6248','6842','1793','1397','7931','7139','9317','9713','3179','3917','1357','13579',
            '96321','12369','98741','14789','78963','36987','74123','32147']
+specstr = ['~','!','@','#','$','%','^','&','*','(',')','_','-','+','=','`']
 
-    
+def nameq(name1,  name2):
+    n1l = []
+    for i in range(0,  len(name2),  1):
+        n1l.append(name2[i]) 
+    i = 1
+    sp = 0
+    for j in range(1,  len(name1),  1):
+        if i == len(name2):
+            n1l[i-1] = n1l[i-1] + name1[sp+1:]
+            break        
+        if name1[j] == name2[i]:
+            n1l[i-1] = n1l[i-1] + name1[sp+1:j]
+            sp = j
+            i = i + 1
+        else:
+            continue
+    return n1l
+            
 def namej(name):
     n2l = []
     lenn = len(name)
     for i in range(0, lenn, 1):
         n2l.append(name[i:i+1])
     return n2l
+
+def birth(bdate):
+    bd = []
+    bd1 = bdate.split(' ')
+    bd = bd1[0].split('-')
+    bd2 = ''.join(bd)
+    bd.append(bd2)
+    return bd
 
 def mob(pho):
     mobl = []
@@ -34,9 +60,23 @@ def qq(qqnum):
             qql.append(qqnum[i:i+6])
     qql.append(qqnum)
     return qql
+
+def user(para):
+    qql = []
+    qlen = len(para)
+    if qlen>3:
+        for i in range(0, (qlen-3), 1):
+            qql.append(para[i:i+4])
+    if qlen>4:
+        for i in range(0, (qlen-4), 1):
+            qql.append(para[i:i+5])        
+    if qlen>5:
+        for i in range(0, (qlen-5), 1):
+            qql.append(para[i:i+6])
+    qql.append(para)
+    return qql
     
 def secr(li, lev, seclen):
-    li = li + foolstr
     e = []
     for i in range(0, lev, 1):
         while 1:
@@ -61,7 +101,7 @@ def secr(li, lev, seclen):
                                 while 1:
                                     fff = random.choice(li)
                                     if len(fff) == (seclen-len(d)-len(f)-len(ff)):
-                                        e.append(d+f+fff)
+                                        e.append(d+f+ff+fff)
                                         break
                                     elif len(fff) < (seclen-len(d)-len(f)-len(ff)):
                                         while 1:

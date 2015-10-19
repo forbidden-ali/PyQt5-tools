@@ -872,7 +872,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
       </widget>
-      <widget class="QCheckBox" name="s3_p1_c1">
+      <widget class="QCheckBox" name="s3_p1_c2">
        <property name="geometry">
         <rect>
          <x>970</x>
@@ -992,8 +992,18 @@ p, li { white-space: pre-wrap; }
          <height>31</height>
         </rect>
        </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+       <property name="date">
+        <date>
+         <year>2000</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
       </widget>
-      <widget class="QDateEdit" name="s3_p1_ed3">
+      <widget class="QDateEdit" name="s3_p1_d3">
        <property name="geometry">
         <rect>
          <x>740</x>
@@ -1001,6 +1011,9 @@ p, li { white-space: pre-wrap; }
          <width>141</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
        </property>
       </widget>
       <widget class="QDateEdit" name="s3_p1_d4">
@@ -1011,6 +1024,9 @@ p, li { white-space: pre-wrap; }
          <width>141</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
        </property>
       </widget>
       <widget class="QDateEdit" name="s3_p1_d2">
@@ -1038,6 +1054,25 @@ p, li { white-space: pre-wrap; }
          <minute>0</minute>
          <second>0</second>
         </time>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="s3_p1_c1">
+       <property name="geometry">
+        <rect>
+         <x>970</x>
+         <y>320</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>包含弱密码</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
        </property>
       </widget>
       <widget class="QWidget" name="">
